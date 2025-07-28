@@ -37,3 +37,10 @@ Ransomware often begins by deleting Volume Shadow Copies to prevent recovery:
 
 ```sh
 vssadmin delete shadows /all
+```
+
+This command is rarely used in healthy environments, making it a high-fidelity detection point. In this lab, we simulate this behavior, observe how LimaCharlie detects it, and create a D&R rule to kill the responsible process automatically.
+
+🧠 Why It Matters
+Volume Shadow Copies allow users to restore files and entire systems. Ransomware targets them early in the kill chain to lock in its damage. By catching this behavior and terminating the attack chain at the parent process level, we prevent further compromise — even before file encryption starts.
+
