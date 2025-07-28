@@ -1,0 +1,1 @@
+# Ransomware-Shadow-Copy-Deletion-Analysis
