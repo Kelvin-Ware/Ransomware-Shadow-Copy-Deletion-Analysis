@@ -22,12 +22,16 @@ This document outlines the initial environment preparation steps for the ransomw
 ```bash
 ssh <user>@<attacker-ip>
 ```
+[SSH from host CMD](./screenshots/Ubuntu%20ssh.png)
+
 # 2. Elevate to root user
 ```bash
 sudo su
 ```
+[Root User](./screenshots/sudo%20su.png)
 
 # 3. Confirm root access
 ```bash
 whoami
 ```
+[Confirm Root](./screenshots/whoami.pmg)
