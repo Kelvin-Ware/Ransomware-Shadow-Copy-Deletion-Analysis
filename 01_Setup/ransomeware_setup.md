@@ -34,4 +34,4 @@ sudo su
 ```bash
 whoami
 ```
-[Confirm Root](./screenshots/whoami.pmg)
+[Confirm Root](./screenshots/whoami.png)
