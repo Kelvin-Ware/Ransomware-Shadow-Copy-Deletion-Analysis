@@ -4,7 +4,7 @@ In this section, we are testing LimaCharlie’s Detection & Response (D&R) capab
 
 ---
 
-# Lab Steps
+# Detection Steps
 
 ```bash
 # 1. Review Detection
