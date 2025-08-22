@@ -13,7 +13,8 @@ In this section, we are testing LimaCharlie’s Detection & Response (D&R) capab
 # - Expand detection to examine metadata and references
 # - View the Timeline to see the raw event
 ```
-[Detection & Timeline](./screenshots/)
+[Detection](./screenshots/)
+[Timeline](./screenshots/)
 ```
 # 2. Create a D&R Response Rule
 # - Navigate to Respond section
@@ -26,12 +27,10 @@ In this section, we are testing LimaCharlie’s Detection & Response (D&R) capab
 #   - `action: report` sends a detection report to the Detections tab
 #   - `action: task` kills the parent process running `vssadmin delete shadows /all`
 ```
- [Response Rule](./screenshots/)
+ 
 ```
 # 3. Test the Rule
 # - Return to your Sliver C2 session
-```
-```bash
 vssadmin delete shadows /all
 ```
  
