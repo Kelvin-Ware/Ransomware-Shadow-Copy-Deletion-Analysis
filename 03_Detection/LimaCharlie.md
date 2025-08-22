@@ -14,7 +14,6 @@ In this section, we are testing LimaCharlie’s Detection & Response (D&R) capab
 # - View the Timeline to see the raw event
 ```
 [Detection](./screenshots/)
-
 [Timeline](./screenshots/)
 ```
 # 2. Create a D&R Response Rule
