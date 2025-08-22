@@ -26,7 +26,7 @@ sessions
 ```bash
  use <session_id>
 ```
-[Session Interaction](./screenshots/interact%20with%20session.png)
+[Session Interaction](./screenshots/Interact%20with%20session.png)
 
  Drop to system native command prompt 
 ```bash
