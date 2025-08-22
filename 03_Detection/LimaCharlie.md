@@ -1,38 +1,44 @@
-# LimaCharlie D&R Lab: VSS Deletion Test
+# LimaCharlie D&R Lab: Volume Shadow Copy Deletion
+
+In this section, we are testing LimaCharlie’s Detection & Response (D&R) capabilities. Specifically, we simulate a common ransomware behavior—deleting Volume Shadow Copies—and observe how default Sigma rules detect this activity. We also create a response rule that terminates the offending process, demonstrating automated defense in action.
+
+---
+
+## Lab Steps
 
 ```bash
 # 1. Review Detection
 # - Open LimaCharlie’s Detection tab
 # - Locate the event triggered by `vssadmin delete shadows /all`
-# - Expand detection to examine all metadata and references
+# - Expand detection to examine metadata and references
 # - View the Timeline to see the raw event
+```
+[Detection & Timeline](./screenshots/)
 
 # 2. Create a D&R Response Rule
-# Respond section -> add new rule
+# - Navigate to Respond section
+# - Add new rule:
+[D&R Rule](./screenshots/)
 
-# Add action to terminate parent process of offending command
-action: task
-command: deny_tree
-target: <<routing/parent>>
-
-# Save rule as: vss_deletion_kill_it
-# Explanation:
-# - `action: report` -> sends detection report to Detections tab
-# - `action: task` -> kills parent process running `vssadmin delete shadows /all`
-#   Simulates stopping ransomware or lateral movement tool
+# - Save rule as `vss_deletion_kill_it`
+# - Explanation:
+#   - `action: report` sends a detection report to the Detections tab
+#   - `action: task` kills the parent process running `vssadmin delete shadows /all`
+ [Response Rule](./screenshots/)
 
 # 3. Test the Rule
 # - Return to your Sliver C2 session
+```bash
 vssadmin delete shadows /all
+```
+ 
 
-# Expected behavior:
-# - Command succeeds
-# - D&R rule triggers and terminates parent process
-# - System shell will hang when running:
-whoami
-#   (No output indicates parent process terminated)
+# - Expected behavior:
+#   - Command succeeds
+#   - D&R rule triggers and terminates parent process
 
 # 4. Confirm Detection
-# - Go to Detections screen
+# - Go back to the Detections screen
 # - Verify that `vss_deletion_kill_it` rule fired
+[Response Rule](./screenshots/)
 
