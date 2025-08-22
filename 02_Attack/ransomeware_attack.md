@@ -7,6 +7,8 @@ With the environment prepared and access to the victim machine confirmed, I proc
 ```bash
 sliver-server
 ```
+[Launch Sliver](./Launch%20sliver.png)
+ 
  Run HTTP listner
 ```bash
 http
