@@ -13,14 +13,13 @@ In this section, we are testing LimaCharlie’s Detection & Response (D&R) capab
 # - Expand detection to examine metadata and references
 # - View the Timeline to see the raw event
 ```
-[Detection](./screenshots/)
-[Timeline](./screenshots/)
+[Timeline](./screenshots/limacharlie%20timeline%20telemetry.png)
 ```
 # 2. Create a D&R Response Rule
 # - Navigate to Respond section
 # - Add new rule:
 ```
-[D&R Rule](./screenshots/)
+[D&R Rule](./screenshots/Create%20Detection%20Rule.png)
 ```
 # - Save rule as `vss_deletion_kill_it`
 # - Explanation:
@@ -43,5 +42,5 @@ vssadmin delete shadows /all
 # - Go back to the Detections screen
 # - Verify that `vss_deletion_kill_it` rule fired
 ```
-[Response Rule](./screenshots/)
+[Confirm Detection & Process Termination](./screenshots/Limacharlie%20detection.png)
 
